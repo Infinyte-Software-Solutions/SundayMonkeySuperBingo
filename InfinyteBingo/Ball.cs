@@ -55,6 +55,42 @@ namespace InfinyteBingo
                         return true;
                 }
             }
+            // Test Balls that are I
+            if (GetLetter() == 'I')
+            {
+                if ((GetNumber() > 15) && (GetNumber() < 31))
+                {
+                    if (GetColor() == Color.Indigo)
+                        return true;
+                }
+            }
+            // Test Balls that are N
+            if (GetLetter() == 'N')
+            {
+                if ((GetNumber() > 30) && (GetNumber() < 46))
+                {
+                    if (GetColor() == Color.Red)
+                        return true;
+                }
+            }
+            // Test Balls that are G
+            if (GetLetter() == 'G')
+            {
+                if ((GetNumber() > 45) && (GetNumber() < 61))
+                {
+                    if (GetColor() == Color.Green)
+                        return true;
+                }
+            }
+            // Test Balls that are O
+            if (GetLetter() == 'O')
+            {
+                if ((GetNumber() > 60) && (GetNumber() < 76))
+                {
+                    if (GetColor() == Color.Orange)
+                        return true;
+                }
+            }
             return false;
         }
           
