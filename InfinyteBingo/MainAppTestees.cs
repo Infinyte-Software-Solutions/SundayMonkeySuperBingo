@@ -20,7 +20,7 @@ namespace InfinyteBingo
             // Your Code goes here ()=====>
             Display("Insert Your ()=========>\'in Around Here!");
 
-            Ball b = new Ball('B', 17, Color.Blue);
+            Ball b = new Ball('B', 1, Color.Blue);
             
             Display("Ball is valid:" + b.isBallValid() );
             b.ShowDetails();
