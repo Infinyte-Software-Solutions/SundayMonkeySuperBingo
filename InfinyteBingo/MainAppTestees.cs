@@ -24,6 +24,8 @@ namespace InfinyteBingo
 
             myDogsBalls.PopulateStandardBingoBallSet();
 
+            myDogsBalls.ShowBallSetDetails();
+
             Display("Number of Balls in set is : " + myDogsBalls.BallSetSize);
             
             // End of your code - These Lines are to keep the console open till you press enter
