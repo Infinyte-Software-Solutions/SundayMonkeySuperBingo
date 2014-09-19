@@ -20,16 +20,12 @@ namespace InfinyteBingo
             // Your Code goes here ()=====>
             Display("Insert Your ()=========>\'in Around Here!");
 
-            Ball b = new Ball('B', 14, Color.Blue);
+            BallSet myDogsBalls = new BallSet();
+
+            myDogsBalls.PopulateStandardBingoBallSet();
+
+            Display("Number of Balls in set is : " + myDogsBalls.BallSetSize);
             
-            Display("Ball is valid:" + b.isBallValid() );
-            b.ShowDetails();
-
-            Ball i = new Ball('I', 21, Color.Indigo);
-
-            Display("Ball is valid:" + i.isBallValid());
-            i.ShowDetails();
-
             // End of your code - These Lines are to keep the console open till you press enter
             Display("\n\n\n***** End of Debugging Output! Press Enter to Continue/Quit ***********");
             DebugLine = System.Console.ReadLine();

@@ -15,7 +15,7 @@ namespace InfinyteBingo
         // Private Member Variables
         private char _Letter;               // The Letter Of The Ball (B,I,N,G,O) 
         private int _Number;                // The Number on the Ball (1-75)
-        private Color _BallColor;           // The Color of The Ball (Blue, Purple, Red, Green, Orange)
+        private Color _BallColor;           // The Color of The Ball (Blue, Indigo, Red, Green, Orange)
 
 
         // Constructors
@@ -32,9 +32,7 @@ namespace InfinyteBingo
         // Overloaded Constructor 
         // @params : (char BallsLetter, int BallsNumber, Color BallsColor)
         public Ball(char l, int n, Color c)
-        {
-            
-            
+        {    
             _Letter = l;
             _Number = n;
             _BallColor = c;
