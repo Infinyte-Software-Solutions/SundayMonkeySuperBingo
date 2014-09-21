@@ -33,7 +33,7 @@ namespace InfinyteBingo
             }
             else // MaxCapacity !75
             {
-                for (int i = 1; i < popperMaxCapacity; i++)
+                for (var i = 1; i < popperMaxCapacity; i++)
                 {
                     var b = new Ball(i);
                     BingoBallSet.AddBall(b);

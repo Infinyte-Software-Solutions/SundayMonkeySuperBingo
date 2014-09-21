@@ -18,16 +18,48 @@ namespace InfinyteBingo
             Display("Insert Your ()=========>\'in Around Here!");
 
             var popper = new SuperBallPopper(75);
+            var defaultPopper = new SuperBallPopper();
+            var hunPopper = new SuperBallPopper(100);
 
-            Display("My Popper : holds" + popper.PoppersCapacity);
+            Display("I have created 3 poppers!!!");
+            
+            Display("Default Popper has a max capacity of :" + defaultPopper.PoppersCapacity + " Balls.");
+            Display("Default Popper holds: " + defaultPopper.BingoBallSet.BallSetSize + " Balls");
 
-            var myball = popper.PopBall();
-            myball.ShowDetails();
-            myball = popper.PopBall();
-            myball.ShowDetails();
+            Display("Ballset Details: ");
+            defaultPopper.BingoBallSet.ShowBallSetDetails();
+
+            defaultPopper.BingoBallSet.ClearBallSet();
             
-            myball.ShowDetails();
-            
+            defaultPopper.BingoBallSet.AddBall(new Ball(20));
+            defaultPopper.BingoBallSet.AddBall(new Ball(50));
+            defaultPopper.BingoBallSet.AddBall(new Ball(10));
+            defaultPopper.BingoBallSet.AddBall(new Ball(27));
+            defaultPopper.BingoBallSet.AddBall(new Ball(75));
+            var myBall = defaultPopper.PopBall();
+            myBall.ShowDetails();
+            myBall = defaultPopper.PopBall();
+            myBall.ShowDetails();
+
+            Display("Ballset Details: ");
+            defaultPopper.BingoBallSet.ShowBallSetDetails();
+
+
+            //Display("Main Popper has a max capacity of :" + popper.PoppersCapacity + " Balls.");
+            //Display("Default Popper holds: " + popper.BingoBallSet.BallSetSize + " Balls");
+
+            //Display("Ballset Details: ");
+            //popper.BingoBallSet.ShowBallSetDetails();
+
+            //Display("Default Popper has a max capacity of :" + hunPopper.PoppersCapacity + " Balls.");
+            //Display("Default Popper holds: " + hunPopper.BingoBallSet.BallSetSize + " Balls");
+
+            //Display("Ballset Details: ");
+            //hunPopper.BingoBallSet.ShowBallSetDetails();
+
+
+
+
             // End of your code - These Lines are to keep the console open till you press enter
             Display("\n\n\n***** End of Debugging Output! Press Enter to Continue/Quit ***********");
             Console.ReadLine();
