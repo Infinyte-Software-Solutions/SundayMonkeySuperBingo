@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace InfinyteBingo
 {
     class Ball 
     {
         // Properties
-        
         // Private Member Variables
-        private char _Letter;               // The Letter Of The Ball (B,I,N,G,O) 
-        private int _Number;                // The Number on the Ball (1-75)
-        private Color _BallColor;           // The Color of The Ball (Blue, Indigo, Red, Green, Orange)
-
+        private char _letter;               // The Letter Of The Ball (B,I,N,G,O) 
+        private int _number;                // The Number on the Ball (1-75)
+        private Color _ballColor;           // The Color of The Ball (Blue, Indigo, Red, Green, Orange)
 
         // Constructors
         
@@ -24,9 +17,9 @@ namespace InfinyteBingo
         public Ball()
         {
             // Setting all of the ball's default properties to invalid values.
-            _Letter = 'Z';
-            _Number = 0;
-            _BallColor = Color.Transparent;
+            _letter = 'Z';
+            _number = 0;
+            _ballColor = Color.Transparent;
         }
 
         // Overloaded Constructor
@@ -36,57 +29,55 @@ namespace InfinyteBingo
             // Setting all of the ball's default properties
             SetNumber(n);
 
-            if ( (n > 0) && (n < 16) )
+            if ((n > 0) && (n < 16))
             {
                 SetLetter('B');
                 SetColor(Color.Blue);
             }
 
-            if ( (n > 15) && (n < 31) )
+            if ((n > 15) && (n < 31))
             {
                 SetLetter('I');
                 SetColor(Color.Indigo);
             }
 
-            if ( (n > 30) && (n < 46) )
+            if ((n > 30) && (n < 46))
             {
                 SetLetter('N');
                 SetColor(Color.Red);
             }
 
-            if ( (n > 45) && (n < 61) )
+            if ((n > 45) && (n < 61))
             {
                 SetLetter('G');
                 SetColor(Color.Green);
             }
 
-            if ( (n > 60) && (n < 76) )
+            if ((n > 60) && (n < 76))
             {
                 SetLetter('O');
                 SetColor(Color.Orange);
             }
-
         }
         
         // Overloaded Constructor 
         // @params : (char BallsLetter, int BallsNumber, Color BallsColor)
         public Ball(char l, int n, Color c)
-        {    
-            _Letter = l;
-            _Number = n;
-            _BallColor = c;
+        { 
+            _letter = l;
+            _number = n;
+            _ballColor = c;
         }
 
         // Class Methods
 
         // Is Ball Valid Method
-        public bool isBallValid()
+        public bool IsBallValid()
         {
-            
             // Test Balls that are B
             if (GetLetter() == 'B')
             {
-                if ( (GetNumber() > 0) && (GetNumber() < 16) )
+                if ((GetNumber() > 0) && (GetNumber() < 16))
                 {
                     if (GetColor() == Color.Blue)
                         return true;
@@ -130,43 +121,44 @@ namespace InfinyteBingo
             }
             return false;
         }
-          
       
         // Ball Properties Public Get/Set Methods
         public char GetLetter()
         {
-            return _Letter;
+            return _letter;
         }
 
         public int GetNumber()
         {
-            return _Number;
+            return _number;
         }
+
         public Color GetColor()
         {
-            return _BallColor;
+            return _ballColor;
         }
 
         public void SetLetter(char l)
         {
-            _Letter = l;
+            _letter = l;
         }
 
         public void SetNumber(int n)
         {
-            _Number = n;
+            _number = n;
         }
+
         public void SetColor(Color c)
         {
-            _BallColor = c;
+            _ballColor = c;
         }
 
         // Setter to Set All of Ball's Properties
         public void SetAllProperties(char l, int n, Color c)
         {
-            this.SetNumber(n);
-            this.SetColor(c);
-            this.SetLetter(l);
+            SetNumber(n);
+            SetColor(c);
+            SetLetter(l);
         }
 
         // Debug Methods 
@@ -174,14 +166,13 @@ namespace InfinyteBingo
         // Output Ball's Details to Console
         public void ShowDetails()
         {
-            System.Console.WriteLine( this.GetDetailsString() );
+            Console.WriteLine(GetDetailsString());
         }
 
-        // Get a String containing All of Ball's Private Propertie's Info (Letter,Number and Color)
+        // Get a String containing All of Ball's Private Properties Info (Letter,Number and Color)
         public String GetDetailsString() 
         {
-            return (_Letter + " " + _Number +  ", is " + _BallColor + '\n');
+            return (_letter + " " + _number + ", is " + _ballColor + '\n');
         }
-    
     }
 }
