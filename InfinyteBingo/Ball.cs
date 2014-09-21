@@ -28,6 +28,45 @@ namespace InfinyteBingo
             _Number = 0;
             _BallColor = Color.Transparent;
         }
+
+        // Overloaded Constructor
+        // @Params :(int i-> The Ball's integer value
+        public Ball(int n)
+        {
+            // Setting all of the ball's default properties
+            SetNumber(n);
+
+            if ( (n > 0) && (n < 16) )
+            {
+                SetLetter('B');
+                SetColor(Color.Blue);
+            }
+
+            if ( (n > 15) && (n < 31) )
+            {
+                SetLetter('I');
+                SetColor(Color.Indigo);
+            }
+
+            if ( (n > 30) && (n < 46) )
+            {
+                SetLetter('N');
+                SetColor(Color.Red);
+            }
+
+            if ( (n > 45) && (n < 61) )
+            {
+                SetLetter('G');
+                SetColor(Color.Green);
+            }
+
+            if ( (n > 60) && (n < 76) )
+            {
+                SetLetter('O');
+                SetColor(Color.Orange);
+            }
+
+        }
         
         // Overloaded Constructor 
         // @params : (char BallsLetter, int BallsNumber, Color BallsColor)
