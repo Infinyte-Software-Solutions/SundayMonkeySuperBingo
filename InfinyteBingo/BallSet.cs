@@ -88,7 +88,7 @@ namespace InfinyteBingo
         }
         public Ball RemoveLastBall()
         {
-            Ball b = _Balls.ElementAt(_Balls.Count);
+            Ball b = _Balls.Last();
             _Balls.Remove(b);
             BallSetSize = _Balls.Count;
             return b;
